@@ -1,5 +1,6 @@
 // react
 import { FC } from "react";
+import { Box } from "@mui/material";
 
 interface CardProps {
   imgSrc: string;
@@ -8,7 +9,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ imgSrc, title }) => {
   return (
-    <div
+    <Box
       className="relative group flex items-center justify-center py-12 px-8 bg-accent
      hover:bg-hoverPrimary flex-1 cursor-pointer h-[210px] xs:h-[290px] min-w-fit sm:min-w-[330px]
       max-w-[448px] rounded-2xl overflow-hidden transition-all duration-700 ease-in-out"
@@ -25,7 +26,7 @@ const Card: FC<CardProps> = ({ imgSrc, title }) => {
       >
         {title}
       </p>
-    </div>
+    </Box>
   );
 };
 

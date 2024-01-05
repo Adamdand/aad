@@ -1,11 +1,11 @@
 // react
 import { useState } from "react";
-
+import { Box } from "@mui/material";
 // assets
 import projectsPageImg from "../assets/projects-page.svg";
 
 // components
-import { Button, Card, Reveal } from "../components";
+import { CustomButton, Card, Reveal } from "../components";
 
 // data
 import { projects } from "../data";
@@ -31,7 +31,7 @@ const Projects = () => {
   };
 
   return (
-    <div
+    <Box
       id="projects"
       className="min-h-screen relative"
       style={{
@@ -41,8 +41,8 @@ const Projects = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="max-w-screen-2xl w-full py-16 px-12 mx-auto">
-        <div className="flex-1 flex flex-col gap-4">
+      <Box className="max-w-screen-2xl w-full py-16 px-12 mx-auto">
+        <Box className="flex-1 flex flex-col gap-4">
           <Reveal>
             <h2
               className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px] 
@@ -60,18 +60,18 @@ const Projects = () => {
             viewport={{ once: false }}
             className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
           >
-            <Button
+          <CustomButton
               secondary={activeCategory === "uiUx" ? true : false}
               onClick={() => setActiveCategory("uiUx")}
             >
               UI/UX
-            </Button>
-            <Button
+          </CustomButton>
+          <CustomButton
               secondary={activeCategory === "web" ? true : false}
               onClick={() => setActiveCategory("web")}
             >
               Web design
-            </Button>
+          </CustomButton>
           </motion.div>
 
           <motion.div
@@ -86,9 +86,9 @@ const Projects = () => {
               <Card imgSrc={item.img} title={item.title} />
             ))}
           </motion.div>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

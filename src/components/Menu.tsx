@@ -1,5 +1,6 @@
 // mui
 import { IconButton, Tooltip } from "@mui/material";
+import { Box } from "@mui/material";
 
 // mui - icons
 import HomeIcon from "@mui/icons-material/Home";
@@ -12,7 +13,7 @@ import { Link } from "react-scroll";
 
 const Menu = () => {
   return (
-    <div
+    <Box
       className="fixed bottom-0 sm:bottom-12 w-full sm:w-fit left-1/2 -translate-x-1/2 bg-accent
   rounded-t-xl sm:rounded-full py-3 px-6 flex items-center justify-around sm:justify-center gap-12 z-30"
     >
@@ -47,7 +48,7 @@ const Menu = () => {
           </IconButton>
         </Tooltip>
       </Link>
-    </div>
+    </Box>
   );
 };
 

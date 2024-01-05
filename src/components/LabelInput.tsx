@@ -1,5 +1,6 @@
 // react
 import { FC } from "react";
+import { Box } from "@mui/material";
 
 interface LabelInputProps {
   labelText: string;
@@ -13,7 +14,7 @@ const LabelInput: FC<LabelInputProps> = ({
   textarea,
 }) => {
   return (
-    <div className="flex flex-col gap-2.5 flex-1 w-full">
+    <Box className="flex flex-col gap-2.5 flex-1 w-full">
       <label
         htmlFor={placeholderText}
         className="text-textPrimary text-base sm:text-lg font-bold"
@@ -39,7 +40,7 @@ const LabelInput: FC<LabelInputProps> = ({
           placeholder-textSecondary outline-none resize-none border-[1px] border-transparent focus:border-hoverSecondary"
         />
       )}
-    </div>
+    </Box>
   );
 };
 

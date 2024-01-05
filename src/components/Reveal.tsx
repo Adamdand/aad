@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 // utils
 import { transition } from "../utils/transition";
+import { Box } from "@mui/material";
 
 // react
 import { FC, ReactNode } from "react";
@@ -14,7 +15,7 @@ interface RevealProps {
 
 const Reveal: FC<RevealProps> = ({ children }) => {
   return (
-    <div className="relative">
+    <Box className="relative">
       <motion.div
         variants={{
           hidden: {
@@ -39,7 +40,7 @@ const Reveal: FC<RevealProps> = ({ children }) => {
         viewport={{ once: false }}
         className="absolute inset-0 bg-secondary z-10"
       ></motion.div>
-    </div>
+    </Box>
   );
 };
 

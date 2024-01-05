@@ -4,7 +4,7 @@ import homePageIllustation from "../assets/hero-illustration.svg";
 import downloadIcon from "../assets/download-btn-icon.svg";
 
 // components
-import { Button } from "../components";
+import { CustomButton } from "../components";
 
 // react-simple-typewriter
 import { Typewriter } from "react-simple-typewriter";
@@ -15,10 +15,11 @@ import { motion } from "framer-motion";
 // utils
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
+import { Box } from "@mui/material";
 
 const Hero = () => {
   return (
-    <div
+    <Box
       id="home"
       className="min-h-screen flex items-center justify-center relative"
       style={{
@@ -28,11 +29,11 @@ const Hero = () => {
         backgroundSize: "cover",
       }}
     >
-      <div
+      <Box
         className="max-w-screen-2xl flex flex-col 
           xl:flex-row xl:justify-between items-center xl:items-start gap-12 w-full py-16 px-12"
       >
-        <div className="w-full xl:w-fit">
+        <Box className="w-full xl:w-fit">
           <motion.h1
             variants={fadeIn("down")}
             transition={transition()}
@@ -63,10 +64,10 @@ const Hero = () => {
             viewport={{ once: false }}
             className="my-12 flex flex-col sm:flex-row items-center gap-6 justify-center xl:justify-start"
           >
-            <Button secondary>Hire me</Button>
-            <Button icon={downloadIcon}>Download CV</Button>
+          <CustomButton secondary>Hire me</CustomButton>
+          <CustomButton icon={downloadIcon}>Download CV</CustomButton>
           </motion.div>
-        </div>
+        </Box>
 
         <motion.img
           variants={scale()}
@@ -78,10 +79,10 @@ const Hero = () => {
           alt=""
           className="max-w-full sm:max-w-[401px]"
         />
-      </div>
+      </Box>
 
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
-    </div>
+      <Box className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
+    </Box>
   );
 };
 

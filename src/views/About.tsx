@@ -5,6 +5,7 @@ import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
 import youtubeIcon from "../assets/youtube-icon.svg";
+import { Box } from "@mui/material";
 
 // components
 import { SocialMediaIcon, Reveal } from "../components";
@@ -18,7 +19,7 @@ import { transition } from "../utils/transition";
 
 const About = () => {
   return (
-    <div
+    <Box
       id="about"
       className="min-h-screen flex items-center justify-center relative"
       style={{
@@ -28,11 +29,11 @@ const About = () => {
         backgroundSize: "cover",
       }}
     >
-      <div
+      <Box
         className="max-w-screen-2xl flex flex-col xl:flex-row xl:justify-between
           items-center xl:items-start gap-12 w-full py-16 px-12"
       >
-        <div className="flex-1 flex flex-col gap-4">
+        <Box className="flex-1 flex flex-col gap-4">
           <Reveal>
             <h2
               className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px] 
@@ -64,9 +65,9 @@ const About = () => {
             <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" />
             <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" />
           </motion.div>
-        </div>
+        </Box>
 
-        <div className="flex-1 flex items-center justify-center">
+        <Box className="flex-1 flex items-center justify-center">
           <motion.img
             variants={scale()}
             transition={transition()}
@@ -77,11 +78,11 @@ const About = () => {
             alt=""
             className="max-w-full sm:max-w-[401px]"
           />
-        </div>
-      </div>
+        </Box>
+      </Box>
 
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
-    </div>
+      <Box className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
+    </Box>
   );
 };
 
