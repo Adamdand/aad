@@ -1,5 +1,5 @@
 // assets
-import aboutPageImg from "../assets/about-me-page.svg";
+import aboutPageImg from "../assets/about-me-page2.svg";
 import aboutIllustration from "../assets/about-illustration.svg";
 import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
@@ -39,16 +39,20 @@ const About = () => {
               className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px] 
               font-bold text-textPrimary"
             >
-              About <span className="text-secondary"> me</span>
+              About <span 
+              style={{color:"red"}}
+              // className="text-secondary"
+              > us</span>
             </h2>
           </Reveal>
 
           <Reveal>
             <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis incidunt quis praesentium voluptates et cupiditate
-              minus rem. Voluptatibus ullam beatae expedita voluptatum error,
-              voluptate deserunt impedit similique fuga recusandae sit.
+              A group of friends who love playing scary haunted house games together.
+            </p>
+            <br/>
+            <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
+              After years, we decided to organize our own in-person real life Haunted House game, where the players have to use their investigation skills to uncover clues about the ghost to determine how he/she was killed before it "kills" them!
             </p>
           </Reveal>
 
@@ -60,10 +64,10 @@ const About = () => {
             viewport={{ once: false }}
             className="flex items-center justify-center xl:justify-start gap-6"
           >
-            <SocialMediaIcon imgSrc={facebookIcon} title="Facebook" />
-            <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" />
-            <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" />
-            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" />
+            <SocialMediaIcon imgSrc={facebookIcon} title="Facebook" url="https://www.facebook.com"/>
+            <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" url="https://www.instagram.com"/>
+            <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" url="https://twitter.com/?lang=en"/>
+            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" url="https://www.youtube.com/watch?v=MpGYW4JMH6w&t=66s&ab_channel=Biggfoot"/>
           </motion.div>
         </Box>
 

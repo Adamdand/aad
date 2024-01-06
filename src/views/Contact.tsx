@@ -1,5 +1,5 @@
 // assets
-import contactPageImg from "../assets/contact-page.svg";
+import contactPageImg from "../assets/contact-page2.svg";
 import contactIllustration from "../assets/contact-illustration.svg";
 
 // components
@@ -35,7 +35,10 @@ const Contact = () => {
               className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px] 
               font-bold text-textPrimary"
             >
-              Got a project in<span className="text-secondary"> mind?</span>
+              Summon<span 
+              // className="text-secondary"
+              style={{color:"red"}}
+              > us?</span>
             </h2>
           </Reveal>
 

@@ -5,47 +5,47 @@ import webOne from "./assets/web-project-one.jpeg";
 import webTwo from "./assets/web-project-two.jpeg";
 import webThree from "./assets/web-project-three.jpeg";
 
-interface Project {
+interface Items {
   id: number;
   category: string;
   img: string;
   title: string;
 }
 
-export const projects: Project[] = [
+export const items: Items[] = [
   {
     id: 0,
-    category: "uiUx",
+    category: "photo",
     img: uiUxOne,
     title: "UI/UX Web Template",
   },
   {
     id: 1,
-    category: "uiUx",
+    category: "photo",
     img: uiUxTwo,
     title: "UI/UX Tablet Template",
   },
   {
     id: 2,
-    category: "uiUx",
+    category: "photo",
     img: uiUxThree,
     title: "Solar System App Design",
   },
   {
     id: 3,
-    category: "web",
+    category: "tool",
     img: webOne,
     title: "Interior Design Website",
   },
   {
     id: 4,
-    category: "web",
+    category: "tool",
     img: webTwo,
     title: "Agency Landing Page",
   },
   {
     id: 5,
-    category: "web",
+    category: "tool",
     img: webThree,
     title: "Crypto Landing Page",
   },
