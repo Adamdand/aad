@@ -1,9 +1,8 @@
 // assets
 import homePageImg from "../assets/home-page2.svg";
-// import homePageIllustation from "../assets/hero-illustration.svg";
 import whiteLogo from "../assets/logo-white-removebg.png";
+import logoTwo from "../assets/logo2.png";
 import bloodyArrowImage from '../assets/bloodyArrow-removebg.png';
-import downloadIcon from "../assets/download-btn-icon.svg";
 
 // components
 import { CustomButton } from "../components";
@@ -109,17 +108,20 @@ const Hero = () => {
           </Box>
           </Box>
         </Box>
-
-        <motion.img
-          variants={scale()}
-          transition={transition()}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
-          src={whiteLogo}
-          alt=""
-          className="max-w-full sm:max-w-[401px]"
-        />
+        <Box sx={{marginRight:'220px'}}>
+            <motion.img
+            variants={scale()}
+            transition={transition()}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            src={logoTwo}
+            alt=""
+            width="220px"
+            height="220px"
+            className="max-w-full sm:max-w-[401px]"
+          />
+        </Box>
       </Box>
 
       <Box className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />

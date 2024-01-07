@@ -1,6 +1,6 @@
 // assets
 import aboutPageImg from "../assets/about-me-page2.svg";
-import aboutIllustration from "../assets/about-illustration.svg";
+import hunters from "../assets/hunters.png";
 import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
@@ -78,7 +78,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
-            src={aboutIllustration}
+            src={hunters}
             alt=""
             className="max-w-full sm:max-w-[401px]"
           />

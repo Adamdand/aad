@@ -1,6 +1,6 @@
 // react
 import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 // assets
 import projectsPageImg from "../assets/projects-page2.svg";
 
@@ -17,10 +17,11 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
-type Category = "photo" | "tool";
+
+type Category = "tool" | "photo";
 
 const Demo = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("photo");
+  const [activeCategory, setActiveCategory] = useState<Category>("tool");
 
   const filteredProjects = () => {
     if (activeCategory === "photo") {
@@ -51,7 +52,7 @@ const Demo = () => {
               Previous <span 
               // className="text-secondary"
               style={{color:'red'}}
-              > Huantings</span>
+              > Hauntings</span>
             </h2>
           </Reveal>
 
@@ -63,17 +64,22 @@ const Demo = () => {
             viewport={{ once: false }}
             className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
           >
+            <CustomButton
+              secondary={activeCategory === "tool" ? true : false}
+              onClick={() => setActiveCategory("tool")}
+            >
+              <Typography sx={{color:'white'}}>
+              Tools
+              </Typography>
+             
+          </CustomButton>
           <CustomButton
               secondary={activeCategory === "photo" ? true : false}
               onClick={() => setActiveCategory("photo")}
             >
+              <Typography sx={{color:'white'}}>
               Photos
-          </CustomButton>
-          <CustomButton
-              secondary={activeCategory === "tool" ? true : false}
-              onClick={() => setActiveCategory("tool")}
-            >
-              Tools
+              </Typography>
           </CustomButton>
           </motion.div>
 
@@ -85,9 +91,11 @@ const Demo = () => {
             viewport={{ once: false }}
             className="flex gap-12 mt-12 flex-wrap justify-center"
           >
+        
             {filteredProjects().map((item) => (
               <Card imgSrc={item.img} title={item.title} />
             ))}
+           
           </motion.div>
         </Box>
       </Box>

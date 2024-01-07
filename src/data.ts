@@ -1,9 +1,17 @@
-import uiUxOne from "./assets/ui-ux-project-one.svg";
-import uiUxTwo from "./assets/ui-ux-project-two.svg";
-import uiUxThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
-import webThree from "./assets/web-project-three.jpeg";
+import toolFlashlight from "./assets/flashlight.png";
+import toolSage from "./assets/sage.png";
+import toolRadio from "./assets/radio.png";
+import toolCross from "./assets/cross.png";
+import photo1 from "./assets/photo1.jpg"
+import photo2 from "./assets/photo2.jpg"
+import photo3 from "./assets/photo3.jpg"
+import photo4 from "./assets/photo4.jpg"
+import photo5 from "./assets/photo5.jpg"
+import photo6 from "./assets/photo6.jpg"
+import photo7 from "./assets/photo7.jpg"
+import photo8 from "./assets/photo8.jpg"
+import photo9 from "./assets/photo9.jpg"
+
 
 interface Items {
   id: number;
@@ -12,41 +20,139 @@ interface Items {
   title: string;
 }
 
+export type photoData = {
+  title: string
+  url: string
+  }
+
+export const photoItems=[
+  {
+    title:'photo1',
+    url:photo1
+  },
+  {
+    title:'photo2',
+    url:photo2
+  },
+  {
+    title:'photo3',
+    url:photo3
+  },
+  {
+    title:'photo4',
+    url:photo4
+  },
+  {
+    title:'photo5',
+    url:photo5
+  },
+  {
+    title:'photo6',
+    url:photo6
+  },
+  {
+    title:'photo7',
+    url:photo7
+  },
+  {
+    title:'photo8',
+    url:photo8
+  },
+  {
+    title:'photo9',
+    url:photo9
+  },
+] as photoData[]
+
 export const items: Items[] = [
   {
     id: 0,
-    category: "photo",
-    img: uiUxOne,
-    title: "UI/UX Web Template",
+    category: "tool",
+    img: toolFlashlight,
+    title: "Flash Light",
   },
   {
     id: 1,
-    category: "photo",
-    img: uiUxTwo,
-    title: "UI/UX Tablet Template",
+    category: "tool",
+    img: toolSage,
+    title: "Sage",
   },
   {
     id: 2,
-    category: "photo",
-    img: uiUxThree,
-    title: "Solar System App Design",
+    category: "tool",
+    img: toolRadio,
+    title: "Radio",
   },
   {
     id: 3,
     category: "tool",
-    img: webOne,
-    title: "Interior Design Website",
+    img: toolCross,
+    title: "Wooden Cross",
   },
+  // {
+  //   id: 4,
+  //   category: "photo",
+  //   img: webTwo,
+  //   title: "Agency Landing Page",
+  // },
+  // {
+  //   id: 5,
+  //   category: "photo",
+  //   img: webThree,
+  //   title: "Crypto Landing Page",
+  // },
   {
     id: 4,
-    category: "tool",
-    img: webTwo,
-    title: "Agency Landing Page",
+    category: "photo",
+    title:'photo1',
+    img:photo1
   },
   {
-    id: 5,
-    category: "tool",
-    img: webThree,
-    title: "Crypto Landing Page",
+    id: 7,
+    category: "photo",
+    title:'photo2',
+    img:photo2
+  },
+  {
+    id:8,
+    category: "photo",
+    title:'photo3',
+    img:photo3
+  },
+  {
+    id: 9,
+    category: "photo",
+    title:'photo4',
+    img:photo4
+  },
+  {
+    id: 10,
+    category: "photo",
+    title:'photo5',
+    img:photo5
+  },
+  {
+    id: 11,
+    category: "photo",
+    title:'photo6',
+    img:photo6
+  },
+  {
+    id: 12,
+    category: "photo",
+    title:'photo7',
+    img:photo7
+  },
+  {
+    id: 13,
+    category: "photo",
+    title:'photo8',
+    img:photo8
+  },
+  {
+    id: 14,
+    category: "photo",
+    title:'photo9',
+    img:photo9
   },
 ];

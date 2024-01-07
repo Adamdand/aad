@@ -1,6 +1,6 @@
 // assets
 import contactPageImg from "../assets/contact-page2.svg";
-import contactIllustration from "../assets/contact-illustration.svg";
+import summoning from "../assets/summon.png";
 
 // components
 import { CustomButton, LabelInput, Reveal } from "../components";
@@ -48,9 +48,10 @@ const Contact = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
-            src={contactIllustration}
+            src={summoning}
             alt=""
             className="max-h-[348px]"
+            width="400px"
           />
         </Box>
 
