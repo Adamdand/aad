@@ -67,25 +67,25 @@ export const photoItems=[
 export const items: Items[] = [
   {
     id: 0,
-    category: "tool",
+    category: "hunterTool",
     img: toolFlashlight,
     title: "Flash Light",
   },
   {
     id: 1,
-    category: "tool",
+    category: "hunterTool",
     img: toolSage,
     title: "Sage",
   },
   {
     id: 2,
-    category: "tool",
+    category: "hunterTool",
     img: toolRadio,
     title: "Radio",
   },
   {
     id: 3,
-    category: "tool",
+    category: "hunterTool",
     img: toolCross,
     title: "Wooden Cross",
   },

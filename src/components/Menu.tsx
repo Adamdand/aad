@@ -7,6 +7,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import AppsIcon from "@mui/icons-material/Apps";
 import MailIcon from "@mui/icons-material/Mail";
+import homeicon from "../assets/homeicon.png"
 
 // react-scroll
 import { Link } from "react-scroll";
@@ -20,7 +21,10 @@ const Menu = () => {
       <Link to="home" smooth>
         <Tooltip title="Home" placement="top" arrow>
           <IconButton className="group">
-            <HomeIcon className="text-white group-hover:text-secondary" />
+            <Box sx={{width:'24px', height:'24px'}}>
+            <img src={homeicon} alt="" />
+            </Box>
+            {/* <HomeIcon className="text-white group-hover:text-secondary" /> */}
           </IconButton>
         </Tooltip>
       </Link>

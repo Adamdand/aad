@@ -18,16 +18,19 @@ import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
 
-type Category = "tool" | "photo";
+type Category = "ghostTool" | "hunterTool" | "photo";
 
 const Demo = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("tool");
+  const [activeCategory, setActiveCategory] = useState<Category>("hunterTool");
 
   const filteredProjects = () => {
     if (activeCategory === "photo") {
       return items.filter((item) => item.category === "photo");
-    } else {
-      return items.filter((item) => item.category === "tool");
+    } if (activeCategory === "hunterTool") {
+      return items.filter((item) => item.category === "hunterTool");
+    }
+    else {
+      return items.filter((item) => item.category === "ghostTool");
     }
   };
 
@@ -65,11 +68,20 @@ const Demo = () => {
             className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
           >
             <CustomButton
-              secondary={activeCategory === "tool" ? true : false}
-              onClick={() => setActiveCategory("tool")}
+              secondary={activeCategory === "hunterTool" ? true : false}
+              onClick={() => setActiveCategory("hunterTool")}
             >
               <Typography sx={{color:'white'}}>
-              Tools
+              Hunter Tools
+              </Typography>
+             
+          </CustomButton>
+          <CustomButton
+              secondary={activeCategory === "ghostTool" ? true : false}
+              onClick={() => setActiveCategory("ghostTool")}
+            >
+              <Typography sx={{color:'white'}}>
+              Ghost Tools
               </Typography>
              
           </CustomButton>

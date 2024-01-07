@@ -1,6 +1,7 @@
 // assets
 import contactPageImg from "../assets/contact-page2.svg";
 import summoning from "../assets/summon.png";
+import ghostThumb from "../assets/ghost-thumb.png"
 
 // components
 import { CustomButton, LabelInput, Reveal } from "../components";
@@ -11,9 +12,40 @@ import { motion } from "framer-motion";
 // utils
 import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { sendEmailDataToFirestore } from "../api/firebase";
+import { SetStateAction, useState } from "react";
+
 
 const Contact = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [sendMessageActive, setSendMessageActive] = useState<boolean>(true)
+
+  const handleNameChange = (value:string ) => {
+    setName(value);
+  };
+
+  const handleEmailChange = (value:string) => {
+    setEmail(value);
+  };
+
+  const handleMessageChange = (value:string) => {
+    setMessage(value);
+  };
+
+
+  const sendEmail=()=>{
+    sendEmailDataToFirestore(name,email,message)
+    setSendMessageActive(false)
+  }
+
+  const allowMessage = ()=>{
+    setSendMessageActive(true)
+  }
+
+  
   return (
     <Box
       id="contact"
@@ -63,20 +95,64 @@ const Contact = () => {
           viewport={{ once: false }}
           className="flex-1 flex flex-col gap-6 w-full max-w-[696px]"
         >
+          {sendMessageActive &&(
+          <>
+          <Box>
+            <Typography sx={{color:'lightGray'}}>*all field are optional, simply hitting 'send' will let us know that you like our idea! add your email if you would like to be informed when our 'in real life' ghost hunting game goes live.
+            </Typography>
+          </Box>
           <Box className="flex flex-col sm:flex-row items-center gap-6">
-            <LabelInput labelText="Your name" placeholderText="Name" />
-            <LabelInput labelText="Your email" placeholderText="Email" />
+            <LabelInput placeholderText="Name"  labelText="Name" value={name}  onChangeFunc={handleNameChange}/>
+            <LabelInput  placeholderText="Email" labelText="Email" value={email} onChangeFunc={handleEmailChange} />
           </Box>
 
           <Box className="flex flex-col sm:flex-row items-center gap-6">
             <LabelInput
-              labelText="Your message"
               placeholderText="Message"
               textarea
+              labelText="Your message" 
+              value={message}
+              onChangeFunc={handleMessageChange}
             />
           </Box>
+          <CustomButton onClick={sendEmail} secondary>Send Message</CustomButton>
+          </>
+          )}
+           {!sendMessageActive &&(
+          <>
+          <Box className="flex flex-col sm:flex-row items-center gap-6">
+            <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
+              Thank you for your support, we are excited to start getting demo's out soon!
+            </p>
+          </Box>
+          <Box className="flex-1 flex items-center justify-center">
+          <motion.img
+            variants={scale()}
+            transition={transition()}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            src={ghostThumb}
+            alt=""
+            className="max-w-full sm:max-w-[401px]"
+          />
+        </Box>
 
-        <CustomButton secondary>Send Message</CustomButton>
+          <Box className="flex flex-col sm:flex-row items-center gap-6">
+            <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
+              Would you like to 
+            </p>
+            <Box sx={{paddingTop:'2px', marginLeft:'-24px', marginRight:'-24px'}}>
+              <CustomButton onClick={allowMessage} secondary>Send Another Message</CustomButton>
+            </Box>
+            <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
+              ?
+            </p>
+          </Box>
+         
+          </>
+          )}
+
         </motion.div>
       </Box>
 
