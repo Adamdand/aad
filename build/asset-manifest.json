@@ -1,31 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c7056e0.css",
-    "main.js": "/static/js/main.9a8c0ce6.js",
-    "static/media/ui-ux-project-three.svg": "/static/media/ui-ux-project-three.c4ab1a68cf6682639663adc05e33a5ef.svg",
-    "static/media/ui-ux-project-two.svg": "/static/media/ui-ux-project-two.220ed19d358c642386f2dda1fa3a313e.svg",
-    "static/media/ui-ux-project-one.svg": "/static/media/ui-ux-project-one.8987ef6161957e5ced22044ec2c410f3.svg",
+    "main.css": "/static/css/main.d7313253.css",
+    "main.js": "/static/js/main.94084cd8.js",
+    "static/media/hunters.png": "/static/media/hunters.fa4ce18c8e29b5f14469.png",
+    "static/media/summon.png": "/static/media/summon.36a13f257ba16613f511.png",
     "static/media/home-page2.svg": "/static/media/home-page2.abfb3579c5f5edcd02df72db80f8d8ea.svg",
     "static/media/projects-page2.svg": "/static/media/projects-page2.749cbb1c812b843ad4a0d8364770a57b.svg",
+    "static/media/flashlight.png": "/static/media/flashlight.c25ab7f51fcb190185fd.png",
     "static/media/about-me-page2.svg": "/static/media/about-me-page2.d144afd0577725dd47c91aa07c06ade6.svg",
+    "static/media/radio.png": "/static/media/radio.342961fda17a8e4c2f58.png",
+    "static/media/logo2.png": "/static/media/logo2.61628fbf13582fabf4ca.png",
+    "static/media/sage.png": "/static/media/sage.d1482b098b16bffcd82f.png",
     "static/media/contact-page2.svg": "/static/media/contact-page2.9bd4e023f96178037b0d028c15ac755d.svg",
-    "static/media/web-project-one.jpeg": "/static/media/web-project-one.7ef0461f72aedc165f64.jpeg",
-    "static/media/web-project-three.jpeg": "/static/media/web-project-three.5fc24b8e86904bfe5856.jpeg",
-    "static/media/logo-white-removebg.png": "/static/media/logo-white-removebg.8b672143f560fbc1748a.png",
-    "static/media/web-project-two.jpeg": "/static/media/web-project-two.49a6c95132ffa750cd8b.jpeg",
+    "static/media/cross.png": "/static/media/cross.96576553cf9394b7fa35.png",
+    "static/media/photo2.jpg": "/static/media/photo2.e54536aa9280051620b3.jpg",
+    "static/media/photo7.jpg": "/static/media/photo7.3b70c7a3aa3310e647a4.jpg",
+    "static/media/photo3.jpg": "/static/media/photo3.6243a059533db7f6e942.jpg",
+    "static/media/photo5.jpg": "/static/media/photo5.399817355af1993cdc03.jpg",
+    "static/media/photo6.jpg": "/static/media/photo6.18044141be1ead819267.jpg",
     "static/media/bloodyArrow-removebg.png": "/static/media/bloodyArrow-removebg.c04d2e364ecaca909f87.png",
-    "static/media/about-illustration.svg": "/static/media/about-illustration.71feca1f6210ad9210ca9ecccabd0ad3.svg",
-    "static/media/contact-illustration.svg": "/static/media/contact-illustration.309107b7faed5e5dd0680a8772fd9feb.svg",
+    "static/media/photo9.jpg": "/static/media/photo9.7adc479939c43b68a37e.jpg",
+    "static/media/photo8.jpg": "/static/media/photo8.3a78049f09cdd01a62a9.jpg",
+    "static/media/photo4.jpg": "/static/media/photo4.0884325144a1593b30df.jpg",
+    "static/media/photo1.jpg": "/static/media/photo1.fa22a8d119994ee28a07.jpg",
     "static/media/instagram-icon.svg": "/static/media/instagram-icon.14a18ac4832d5e8dde8a983ea18a8fef.svg",
     "static/media/youtube-icon.svg": "/static/media/youtube-icon.0c387b5aaf78d4e425443fb61c918865.svg",
     "index.html": "/index.html",
     "static/media/twitter-icon.svg": "/static/media/twitter-icon.3eb3f3fa36ee79a1ac7d1176a7904f26.svg",
     "static/media/facebook-icon.svg": "/static/media/facebook-icon.014da167b78be7d792a3e909edab6b5c.svg",
-    "main.4c7056e0.css.map": "/static/css/main.4c7056e0.css.map",
-    "main.9a8c0ce6.js.map": "/static/js/main.9a8c0ce6.js.map"
+    "main.d7313253.css.map": "/static/css/main.d7313253.css.map",
+    "main.94084cd8.js.map": "/static/js/main.94084cd8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c7056e0.css",
-    "static/js/main.9a8c0ce6.js"
+    "static/css/main.d7313253.css",
+    "static/js/main.94084cd8.js"
   ]
 }
