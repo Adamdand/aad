@@ -11,6 +11,20 @@ import photo6 from "./assets/photo6.jpg"
 import photo7 from "./assets/photo7.jpg"
 import photo8 from "./assets/photo8.jpg"
 import photo9 from "./assets/photo9.jpg"
+import notebook from "./assets/notebook.png"
+import journal from "./assets/journal.png"
+import ghostJournal from "./assets/ghostJournal.png"
+import uvLight from "./assets/uvLight.png"
+import emfReader from "./assets/emfReader.png"
+import videoCamera from "./assets/videoCamera.png"
+import doll from "./assets/doll.png"
+import grave from "./assets/grave.png"
+import codeBox from "./assets/codeBox.png"
+import childDrawing from "./assets/childDrawing.png"
+import bathbomb from "./assets/bathbomb.png"
+import letter from "./assets/letter.png"
+
+
 
 
 interface Items {
@@ -154,5 +168,71 @@ export const items: Items[] = [
     category: "photo",
     title:'photo9',
     img:photo9
+  },
+  {
+    id: 15,
+    category: "ghostTool",
+    title:'ghost journal',
+    img:ghostJournal
+  },
+  {
+    id: 16,
+    category: "ghostTool",
+    title:'doll',
+    img:doll
+  },
+  {
+    id: 17,
+    category: "ghostTool",
+    title:'grave stones',
+    img:grave
+  },
+  {
+    id: 18,
+    category: "ghostTool",
+    title:'code box',
+    img:codeBox
+  },
+  {
+    id: 19,
+    category: "ghostTool",
+    title:'child drawings',
+    img:childDrawing
+  },
+  {
+    id:20,
+    category: "ghostTool",
+    title:'creepy letter',
+    img:letter
+  },
+  {
+    id: 21,
+    category: "hunterTool",
+    title:'camera and video-camera',
+    img:videoCamera
+  },
+  {
+    id: 22,
+    category: "hunterTool",
+    title:'emf reader',
+    img:emfReader
+  },
+  {
+    id: 23,
+    category: "hunterTool",
+    title:'uv light',
+    img:uvLight
+  },
+  {
+    id: 24,
+    category: "hunterTool",
+    title:'note books and pens',
+    img:notebook
+  },
+  {
+    id: 25,
+    category: "ghostTool",
+    title:'black bath bomb',
+    img:bathbomb
   },
 ];
