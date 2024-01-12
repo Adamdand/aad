@@ -5,6 +5,7 @@ import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
 import youtubeIcon from "../assets/youtube-icon.svg";
+import discordIcon from "../assets/discord-icon.png"
 import { Box } from "@mui/material";
 
 // components
@@ -64,10 +65,10 @@ const About = () => {
             viewport={{ once: false }}
             className="flex items-center justify-center xl:justify-start gap-6"
           >
-            <SocialMediaIcon imgSrc={facebookIcon} title="Facebook" url="https://www.facebook.com"/>
+            <SocialMediaIcon imgSrc={discordIcon} title="Discord" url="https://discord.gg/8Gqbh6d4CB"/>
             <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" url="https://www.instagram.com"/>
             <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" url="https://twitter.com/?lang=en"/>
-            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" url="https://www.youtube.com/watch?v=MpGYW4JMH6w&t=66s&ab_channel=Biggfoot"/>
+            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" url="https://youtu.be/JQcPeQEhRYE"/>
           </motion.div>
         </Box>
 
