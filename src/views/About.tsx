@@ -1,7 +1,6 @@
 // assets
 import aboutPageImg from "../assets/about-me-page2.svg";
 import hunters from "../assets/hunters.png";
-import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
 import youtubeIcon from "../assets/youtube-icon.svg";

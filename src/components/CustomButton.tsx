@@ -1,6 +1,6 @@
 // react
 import { FC, ReactNode } from "react";
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 
 interface ButtonProps {
   children: ReactNode;
