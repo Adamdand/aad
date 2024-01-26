@@ -111,6 +111,7 @@ const Demo = () => {
           </motion.div>
         </Box>
       </Box>
+      <Box className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
     </Box>
   );
 };
