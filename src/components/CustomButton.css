@@ -1,0 +1,20 @@
+.shadow-outline {
+    box-shadow: 0 0 10px rgba(240, 0, 0, 0.75);
+  }
+
+  @keyframes outline-glow {
+    0% {
+      outline-color: rgba(255, 255, 255, 0);
+    }
+    50% {
+      outline-color: rgba(255, 255, 255, 0.75);
+    }
+    100% {
+      outline-color: rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .animated-outline {
+    outline: 2px solid white;
+    animation: outline-glow 2s infinite ease-in-out;
+  }

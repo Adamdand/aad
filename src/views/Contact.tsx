@@ -98,7 +98,13 @@ const Contact = () => {
           {sendMessageActive &&(
           <>
           <Box>
-            <Typography sx={{color:'lightGray'}}>*all field are optional, simply hitting 'send' will let us know that you like our idea! add your email if you would like to be informed when our 'in real life' ghost hunting game goes live.
+            <Typography sx={{color:'lightGray'}}>
+              <p>
+                 *All field are <b>optional</b>, hitting 'Send Message' will inform us that you like our idea!
+              </p>
+              <p>
+                  Add your email if you would like to be informed when our 'in real life' ghost hunting game goes live.
+              </p> 
             </Typography>
           </Box>
           <Box className="flex flex-col sm:flex-row items-center gap-6">
@@ -110,7 +116,7 @@ const Contact = () => {
             <LabelInput
               placeholderText="Message"
               textarea
-              labelText="Your message" 
+              labelText="Your message / Feedback" 
               value={message}
               onChangeFunc={handleMessageChange}
             />

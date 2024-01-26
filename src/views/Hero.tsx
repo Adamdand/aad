@@ -17,6 +17,7 @@ import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
 import { Box, Typography } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
+import CustomButton from "../components/CustomButton";
 
 const Hero = () => {
     const [opacity, setOpacity] = useState(0);
@@ -141,13 +142,35 @@ const Hero = () => {
             </Box>
           </Box>
           
-          <Box sx={{display:'flex', flexdirection:'row', marginTop:'20%', marginLeft:'56px'}}>
+          <Box sx={{display: 'flex',
+                      flexDirection: 'row', // Corrected the property name
+                      justifyContent: 'center', // Centers horizontally in a row
+                      marginTop:'10%', marginLeft:'56px'}}>
             <p
               style={{ opacity: opacity, color:'red', transition: 'opacity 3s ease'}}
                 className="w-full xl:w-fit text-center xl:text-start text-4xl sm:text-6xl lg:text-6xl"
               >
               Late 2024
             </p>
+          </Box>
+
+          <Box  sx={{  display: 'flex',
+                      flexDirection: 'row', // Corrected the property name
+                      justifyContent: 'center', // Centers horizontally in a row
+                      marginTop: '5%',
+                      marginLeft: '56px',
+                      height: '100%'}} 
+                      >
+            <CustomButton glow={true} onClick={() => {
+              const contactElement = document.getElementById('contact');
+              if (contactElement) {
+                  contactElement.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  console.error('Contact element not found');
+                }
+                }} >
+                  Pre-register Now!
+            </CustomButton>
           </Box>
 
         </Box>
