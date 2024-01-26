@@ -16,19 +16,45 @@ import { motion } from "framer-motion";
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
 import { Box, Typography } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
     const [opacity, setOpacity] = useState(0);
+    const boxRef = useRef(null); 
   
     useEffect(() => {
-      const timeout = setTimeout(() => setOpacity(1), 1000); // Delay the fade-in
-      return () => clearTimeout(timeout);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Box is in view
+              setTimeout(() => {
+                setOpacity(1);
+              }, 1000); // Delay of 1 seconds
+            } else {
+              // Box is out of view
+              setOpacity(0);
+            }
+          });
+        },
+        { threshold: 0.1 } // This is the visibility threshold, can be adjusted
+      );
+  
+      const boxElement = document.getElementById('home');
+      if (boxElement) {
+        observer.observe(boxElement);
+      }
+  
+      return () => {
+        if (boxElement) {
+          observer.unobserve(boxElement);
+        }
+      };
     }, []);
-
 
   return (
     <Box
+      ref={boxRef} 
       id="home"
       className="min-h-screen flex items-center justify-center relative"
       style={{
