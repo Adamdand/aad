@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+.firetitle {
+    font-family: "Cairo";
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 1px;
+    line-height:2
+  }
+  
+  h1 {
+  background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJzNngwdjhjcmQ4M28xd250NmE1M2FkdXp1MXlpeGZueHJ5YTBudiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BROrSHlmyzzHf3i/giphy-downsized-large.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 10px 0;
+}

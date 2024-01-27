@@ -3,6 +3,8 @@ import homePageImg from "../assets/home-page2.svg";
 import logoTwo from "../assets/logo2.png";
 import bloodyArrowImage from '../assets/bloodyArrow-removebg.png';
 
+import './Hero.css'
+
 // components
 
 // react-simple-typewriter
@@ -87,7 +89,10 @@ const Hero = () => {
               className="w-full xl:w-fit text-center xl:text-start text-4xl sm:text-6xl lg:text-8xl
                 font-bolt text-textPrimary uppercase"
             >
-              SUMMON
+              <Box>
+                SUMMON
+              </Box>
+             
               <br />
               <Box sx={{display:"flex"}}>
               <Typography sx={{paddingRight:'4px'}}>
@@ -161,7 +166,7 @@ const Hero = () => {
                       marginLeft: '56px',
                       height: '100%'}} 
                       >
-            <CustomButton glow={true} onClick={() => {
+            <CustomButton glow={true} buttonSize="large" onClick={() => {
               const contactElement = document.getElementById('contact');
               if (contactElement) {
                   contactElement.scrollIntoView({ behavior: 'smooth' });

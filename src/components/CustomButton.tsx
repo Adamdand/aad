@@ -9,19 +9,36 @@ interface ButtonProps {
   icon?: string;
   onClick?: () => void;
   glow?: boolean;
+  buttonSize?: string;
 }
 
-const CustomButton: FC<ButtonProps> = ({ children, secondary, icon, onClick, glow }) => {
+const CustomButton: FC<ButtonProps> = ({ children, secondary, icon, onClick, glow, buttonSize }) => {
+
+  let sizeClasses = '';
+  switch(buttonSize) {
+      case 'small':
+          sizeClasses = '12px'; // Smaller font size
+          break;
+      case 'medium':
+          sizeClasses = '18px'; // Medium font size
+          break;
+      case 'large':
+          sizeClasses = '24px'; // Larger font size
+          break;
+      default:
+          sizeClasses = '24px'; // Default font size
+  }
 
     const buttonClassNames =`${secondary ? "bg-secondary" : "bg-accent"} ${
       secondary ? "hover:bg-hoverSecondary" : "hover:bg-hoverPrimary"
-    } transition-all ease-linear duration-300 py-2.5 px-8 rounded-full text-white text-base sm:text-lg text-bold relative w-full sm:w-fit ${glow ? "shadow-outline" : ""}`;
+    } hover:text-white hover:scale-105 transition-all ease-linear duration-300 py-2.5 px-8 rounded-full text-white text-base sm:text-lg text-bold relative w-full sm:w-fit ${glow ? "shadow-outline" : ""}`;
 
     
   return (
     <Button
     onClick={onClick}
     className={buttonClassNames}
+    sx={{color:'red', fontSize:`${sizeClasses}`}}
     // ... rest of your code
   >
       {icon ? (
