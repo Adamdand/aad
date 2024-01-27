@@ -17,16 +17,16 @@ const CustomButton: FC<ButtonProps> = ({ children, secondary, icon, onClick, glo
   let sizeClasses = '';
   switch(buttonSize) {
       case 'small':
-          sizeClasses = '12px'; // Smaller font size
+          sizeClasses = '14px'; // Smaller font size
           break;
       case 'medium':
-          sizeClasses = '18px'; // Medium font size
+          sizeClasses = '16px'; // Medium font size
           break;
       case 'large':
           sizeClasses = '24px'; // Larger font size
           break;
       default:
-          sizeClasses = '24px'; // Default font size
+          sizeClasses = '16px'; // Default font size
   }
 
     const buttonClassNames =`${secondary ? "bg-secondary" : "bg-accent"} ${
