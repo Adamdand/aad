@@ -2,7 +2,8 @@
 .env
 
 # Ignore Node.js dependencies
-/node_modules
+**/.build
+**/build
 
 # Other common ignores for Node.js projects
 # (uncomment or add as needed)
