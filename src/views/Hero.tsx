@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 // utils
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 import CustomButton from "../components/CustomButton";
 
@@ -178,6 +178,15 @@ const Hero = () => {
                   Pre-register Now!
             </CustomButton>
           </Box>
+
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <CustomButton
+              onClick={() => window.open('https://youtu.be/JQcPeQEhRYE', '_blank')}
+            >
+              Watch Trailer
+            </CustomButton>
+          </Box>
+
 
         </Box>
         <Box sx={{marginRight:{xs: '0px', sm:'0px', lg:'220px' },
