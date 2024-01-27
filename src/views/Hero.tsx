@@ -74,11 +74,12 @@ const Hero = () => {
       >
        
         <Box className="w-full xl:w-fit">
-        <Box sx={{display:'flex'}}>
-        <Box sx={{ display: ['none', 'none', null, null, 'block'], width:'50px', height:'100%', paddingTop:'24%', paddingRight:'4px'}}>
+        {/* here added column */}
+        <Box sx={{display:'flex', flexDirection:{xs:'column', lg:'row'}}}>
+        <Box sx={{ display: ['none', 'none', null, null, 'block'], width:'50px', height:'100%', paddingTop:{lg:'72px'}, paddingRight:'4px'}}>
         <img src={bloodyArrowImage} alt="Bloody Arrow" />
         </Box>
-        <Box sx={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+        <Box sx={{display:'flex', flexDirection:'column'}}>
           <Box>
             <motion.h1
               variants={fadeIn("down")}
@@ -89,12 +90,13 @@ const Hero = () => {
               className="w-full xl:w-fit text-center xl:text-start text-4xl sm:text-6xl lg:text-8xl
                 font-bolt text-textPrimary uppercase"
             >
-              <Box>
+              <Box sx={{textAlign:'center'}}>
                 SUMMON
               </Box>
              
               <br />
-              <Box sx={{display:"flex"}}>
+              {/* //here added center */}
+              <Box sx={{display:"flex", justifyContent:{sm:'center',xs:'center', lg:'flex-start'}, marginTop:{lg:'-72px', md:'-72px'}}}> 
               <Typography sx={{paddingRight:'4px'}}>
               'It was so 
               </Typography>
@@ -123,7 +125,7 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
-              className="my-12 flex flex-col sm:flex-row items-center gap-6 justify-center xl:justify-start"
+              className="my-12 flex flex-col sm:flex-row items-center lg:gap-6 sm:gap-2 justify-center xl:justify-start"
             >
               <Box sx={{display:'flex', direction:'row'}}>
               <Typography sx={{color:'white', mr:'4px'}}>
@@ -150,7 +152,7 @@ const Hero = () => {
           <Box sx={{display: 'flex',
                       flexDirection: 'row', // Corrected the property name
                       justifyContent: 'center', // Centers horizontally in a row
-                      marginTop:'10%', marginLeft:'56px'}}>
+                      marginTop:{sm:'5%', lg:'10%'}}}>
             <p
               style={{ opacity: opacity, color:'red', transition: 'opacity 3s ease'}}
                 className="w-full xl:w-fit text-center xl:text-start text-4xl sm:text-6xl lg:text-6xl"
@@ -163,7 +165,6 @@ const Hero = () => {
                       flexDirection: 'row', // Corrected the property name
                       justifyContent: 'center', // Centers horizontally in a row
                       marginTop: '5%',
-                      marginLeft: '56px',
                       height: '100%'}} 
                       >
             <CustomButton glow={true} buttonSize="large" onClick={() => {
@@ -179,8 +180,9 @@ const Hero = () => {
           </Box>
 
         </Box>
-        
-        <Box sx={{marginRight:'220px'}}>
+        <Box sx={{marginRight:{xs: '0px', sm:'0px', lg:'220px' },
+              width: { xs: '100px', sm: '100px', lg: '220px' },
+            }}>
             <motion.img
             variants={scale()}
             transition={transition()}
@@ -189,8 +191,7 @@ const Hero = () => {
             viewport={{ once: false }}
             src={logoTwo}
             alt=""
-            width="220px"
-            height="220px"
+            width="100%"
             className="max-w-full sm:max-w-[401px]"
           />
         </Box>
